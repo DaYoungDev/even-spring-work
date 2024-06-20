@@ -1,0 +1,21 @@
+package com.team3.springProject.chart;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class ChartAPIService {
+
+	private String apiUrl = "https://open.jejudatahub.net/api/proxy/aa7t3a3tabDtbD38a87ta8ttttt388ab/ottooo773btprtrj6p0t1tt0eebjrj3t?beachName=금능&measureItem=대장균";
+	
+	@Autowired
+    private RestTemplate restTemplate;
+	
+	public String dataFromApiUrl() {
+		// 외부 API 호출 및 JSON응답 받기
+		String jsonResponse = restTemplate.getForObject(apiUrl, String.class);
+		System.out.println(jsonResponse);
+		return jsonResponse;
+	}
+}

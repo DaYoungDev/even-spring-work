@@ -1,0 +1,9 @@
+package com.team3.springProject.chart;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class ChartAPIService {
+
+	private String apiUrl = "https://open.jejudatahub.net/api/proxy/aa7t3a3tabDtbD38a87ta8ttttt388ab/ottooo773btprtrj6p0t1tt0eebjrj3t?beachName=금능&measureItem=대장균";
+}
